@@ -9,6 +9,7 @@ import SwiftData
 struct ItineraryView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
+    @Query private var existingRecords: [CheckInRecord]
     
     let date: Date
     let groupSize: Int
@@ -115,7 +116,16 @@ struct ItineraryView: View {
             self.weatherInfo = weather
             
             let result = try await AIItineraryGenerator.generate(date: dateStr, groupSize: groupSize, interests: interests, weather: weather)
-            self.items = result
+            
+            // Sync check-in state with footprint
+            var syncedItems = result
+            for i in 0..<syncedItems.count {
+                if existingRecords.contains(where: { $0.venueName == syncedItems[i].venue.name }) {
+                    syncedItems[i].isCheckedIn = true
+                }
+            }
+            
+            self.items = syncedItems
             self.isLoading = false
             
         } catch {
@@ -126,7 +136,16 @@ struct ItineraryView: View {
             
             do {
                 let result = try await AIItineraryGenerator.generate(date: dateStr, groupSize: groupSize, interests: interests, weather: fallbackWeather)
-                self.items = result
+                
+                // Sync check-in state with footprint
+                var syncedItems = result
+                for i in 0..<syncedItems.count {
+                    if existingRecords.contains(where: { $0.venueName == syncedItems[i].venue.name }) {
+                        syncedItems[i].isCheckedIn = true
+                    }
+                }
+                
+                self.items = syncedItems
                 self.isLoading = false
             } catch {
                 self.errorMessage = error.localizedDescription
@@ -173,6 +192,8 @@ struct ItineraryItemRow: View {
     @Binding var item: ItineraryItem
     let isFirst: Bool
     let isLast: Bool
+    
+    @Query private var existingRecords: [CheckInRecord]
     
     var body: some View {
         HStack(alignment: .top, spacing: 0) {
@@ -268,14 +289,16 @@ struct ItineraryItemRow: View {
     private func checkIn() {
         guard !item.isCheckedIn else { return }
         
-        let record = CheckInRecord(
-            venueName: item.venue.name,
-            address: item.venue.address,
-            latitude: item.venue.latitude ?? 0.0,
-            longitude: item.venue.longitude ?? 0.0
-        )
-        
-        modelContext.insert(record)
+        // Final duplicate check just before inserting
+        if !existingRecords.contains(where: { $0.venueName == item.venue.name }) {
+            let record = CheckInRecord(
+                venueName: item.venue.name,
+                address: item.venue.address,
+                latitude: item.venue.latitude ?? 0.0,
+                longitude: item.venue.longitude ?? 0.0
+            )
+            modelContext.insert(record)
+        }
         
         withAnimation {
             item.isCheckedIn = true
