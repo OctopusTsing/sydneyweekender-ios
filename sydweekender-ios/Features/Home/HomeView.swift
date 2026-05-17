@@ -29,7 +29,10 @@ struct HomeView: View {
     @State private var currentImageIndex = 0
     @State private var currentImageName: String = "Sydney Weekender"
     
-    let timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
+    private static let heroRotationInterval: TimeInterval = 6
+    private let heroFadeDuration: TimeInterval = 1.2
+    
+    let timer = Timer.publish(every: HomeView.heroRotationInterval, on: .main, in: .common).autoconnect()
     
     var body: some View {
         NavigationStack {
@@ -45,16 +48,21 @@ struct HomeView: View {
                         // Base background to ensure stable frame
                         Color.Design.background
                         
-                        if let imageName = currentHeroImageFileName,
-                           let uiImage = loadHeroImage(named: imageName) {
+                        if !heroImages.isEmpty {
                             GeometryReader { proxy in
-                                Image(uiImage: uiImage)
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: proxy.size.width, height: proxy.size.height)
-                                    .clipped()
-                                    .id(imageName)
-                                    .transition(.opacity)
+                                ZStack {
+                                    ForEach(heroImages.indices, id: \.self) { index in
+                                        if let uiImage = loadHeroImage(named: heroImages[index]) {
+                                            Image(uiImage: uiImage)
+                                                .resizable()
+                                                .scaledToFill()
+                                                .frame(width: proxy.size.width, height: proxy.size.height)
+                                                .clipped()
+                                                .opacity(index == currentImageIndex ? 1 : 0)
+                                        }
+                                    }
+                                }
+                                .animation(.easeInOut(duration: heroFadeDuration), value: currentImageIndex)
                             }
                         } else {
                             Image(systemName: "globe.asia.australia.fill")
