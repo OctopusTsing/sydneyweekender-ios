@@ -1,0 +1,298 @@
+{
+  "hiking": [
+    {
+      "name": "Bondi to Coogee Coastal Walk",
+      "type": "hiking",
+      "category": "outdoor",
+      "description": "Stunning 6km coastal walk with ocean views, beaches, and rock pools along the way.",
+      "address": "Bondi Beach to Coogee Beach",
+      "latitude": -33.8915,
+      "longitude": 151.2767,
+      "budgetRange": "Free",
+      "openingHours": "24 hours"
+    },
+    {
+      "name": "Manly to Spit Bridge Walk",
+      "type": "hiking",
+      "category": "outdoor",
+      "description": "10km bushwalk through Sydney Harbour National Park with harbour views and Aboriginal rock engravings.",
+      "address": "Manly to Spit Bridge",
+      "latitude": -33.7969,
+      "longitude": 151.284,
+      "budgetRange": "Free",
+      "openingHours": "24 hours"
+    },
+    {
+      "name": "Blue Mountains National Park",
+      "type": "hiking",
+      "category": "outdoor",
+      "description": "World Heritage site with dramatic cliffs, eucalyptus forests, and the famous Three Sisters.",
+      "address": "Blue Mountains, NSW",
+      "latitude": -33.732,
+      "longitude": 150.312,
+      "budgetRange": "Free",
+      "openingHours": "24 hours"
+    },
+    {
+      "name": "Barangaroo Reserve",
+      "type": "hiking",
+      "category": "outdoor",
+      "description": "Harbourfront park with native plants, walking paths, and stunning harbour views.",
+      "address": "Barangaroo, Sydney",
+      "latitude": -33.861,
+      "longitude": 151.201,
+      "budgetRange": "Free",
+      "openingHours": "6:00 AM - 8:00 PM"
+    },
+    {
+      "name": "North Head Sanctuary",
+      "type": "hiking",
+      "category": "outdoor",
+      "description": "Former quarantine station with bushwalking trails and panoramic harbour views.",
+      "address": "Manly, NSW",
+      "latitude": -33.815,
+      "longitude": 151.294,
+      "budgetRange": "Free",
+      "openingHours": "6:00 AM - 7:30 PM"
+    }
+  ],
+  "cafe_hopping": [
+    {
+      "name": "Bills Darlinghurst",
+      "type": "cafe",
+      "category": "indoor",
+      "description": "Iconic Sydney cafe famous for ricotta hotcakes and scrambled eggs. A must-visit brunch spot.",
+      "address": "359 Crown St, Darlinghurst",
+      "latitude": -33.8783,
+      "longitude": 151.2187,
+      "budgetRange": "$$",
+      "openingHours": "7:30 AM - 4:00 PM"
+    },
+    {
+      "name": "Single O Surry Hills",
+      "type": "cafe",
+      "category": "indoor",
+      "description": "Pioneer of Sydney's specialty coffee scene. Great pour-over and seasonal brunch menu.",
+      "address": "60-64 Reservoir St, Surry Hills",
+      "latitude": -33.8837,
+      "longitude": 151.2095,
+      "budgetRange": "$$",
+      "openingHours": "7:00 AM - 3:30 PM"
+    },
+    {
+      "name": "Pablo & Rusty's",
+      "type": "cafe",
+      "category": "indoor",
+      "description": "Student-friendly cafe near USyd campus with excellent coffee and affordable meals.",
+      "address": "161 Castlereagh St, Sydney",
+      "latitude": -33.8714,
+      "longitude": 151.2097,
+      "budgetRange": "$",
+      "openingHours": "7:00 AM - 4:00 PM"
+    },
+    {
+      "name": "Cornersmith Marrickville",
+      "type": "cafe",
+      "category": "indoor",
+      "description": "Sustainability-focused cafe with house-made pickles and seasonal local produce.",
+      "address": "314 Illawarra Rd, Marrickville",
+      "latitude": -33.9047,
+      "longitude": 151.157,
+      "budgetRange": "$$",
+      "openingHours": "7:00 AM - 3:00 PM"
+    },
+    {
+      "name": "Reuben Hills",
+      "type": "cafe",
+      "category": "indoor",
+      "description": "Trendy cafe in Surry Hills with Latin American inspired food and in-house roasted coffee.",
+      "address": "61 Albion St, Surry Hills",
+      "latitude": -33.8827,
+      "longitude": 151.2114,
+      "budgetRange": "$$",
+      "openingHours": "7:30 AM - 3:00 PM"
+    }
+  ],
+  "art_exhibitions": [
+    {
+      "name": "Art Gallery of NSW",
+      "type": "museum",
+      "category": "indoor",
+      "description": "Major art museum with Australian, Aboriginal, European, and Asian art. Free general admission!",
+      "address": "Art Gallery Rd, Sydney",
+      "latitude": -33.8689,
+      "longitude": 151.2173,
+      "budgetRange": "Free",
+      "openingHours": "10:00 AM - 5:00 PM"
+    },
+    {
+      "name": "Museum of Contemporary Art",
+      "type": "museum",
+      "category": "indoor",
+      "description": "Free museum dedicated to contemporary art from Australia and around the world. Great harbour views.",
+      "address": "140 George St, The Rocks",
+      "latitude": -33.8593,
+      "longitude": 151.2093,
+      "budgetRange": "Free",
+      "openingHours": "10:00 AM - 5:00 PM"
+    },
+    {
+      "name": "White Rabbit Gallery",
+      "type": "museum",
+      "category": "indoor",
+      "description": "Free gallery of contemporary Chinese art. One of the most significant collections in the world.",
+      "address": "30 Balfour St, Chippendale",
+      "latitude": -33.8859,
+      "longitude": 151.2015,
+      "budgetRange": "Free",
+      "openingHours": "10:00 AM - 5:00 PM"
+    },
+    {
+      "name": "Carriageworks",
+      "type": "museum",
+      "category": "indoor",
+      "description": "Contemporary multi-arts centre in a former railway workshop. Free weekend markets too!",
+      "address": "245 Wilson St, Eveleigh",
+      "latitude": -33.8935,
+      "longitude": 151.1952,
+      "budgetRange": "Free",
+      "openingHours": "10:00 AM - 6:00 PM"
+    },
+    {
+      "name": "Powerhouse Museum",
+      "type": "museum",
+      "category": "indoor",
+      "description": "Science, technology, design, and arts museum. Great for curious minds with interactive exhibits.",
+      "address": "500 Harris St, Ultimo",
+      "latitude": -33.8784,
+      "longitude": 151.199,
+      "budgetRange": "$",
+      "openingHours": "10:00 AM - 5:00 PM"
+    }
+  ],
+  "beaches": [
+    {
+      "name": "Bondi Beach",
+      "type": "beach",
+      "category": "outdoor",
+      "description": "Australia's most famous beach. Great for swimming, surfing, and people-watching.",
+      "address": "Bondi Beach, NSW",
+      "latitude": -33.8915,
+      "longitude": 151.2767,
+      "budgetRange": "Free",
+      "openingHours": "24 hours"
+    },
+    {
+      "name": "Manly Beach",
+      "type": "beach",
+      "category": "outdoor",
+      "description": "Iconic Northern Beaches destination. Take the ferry from Circular Quay for amazing harbour views.",
+      "address": "Manly, NSW",
+      "latitude": -33.7969,
+      "longitude": 151.284,
+      "budgetRange": "Free",
+      "openingHours": "24 hours"
+    },
+    {
+      "name": "Coogee Beach",
+      "type": "beach",
+      "category": "outdoor",
+      "description": "Family-friendly beach with a relaxed vibe, ocean pool, and great fish and chips nearby.",
+      "address": "Coogee, NSW",
+      "latitude": -33.9193,
+      "longitude": 151.2582,
+      "budgetRange": "Free",
+      "openingHours": "24 hours"
+    },
+    {
+      "name": "Bronte Beach",
+      "type": "beach",
+      "category": "outdoor",
+      "description": "Beautiful sheltered beach with a natural rock pool and a lovely park for picnics.",
+      "address": "Bronte, NSW",
+      "latitude": -33.9025,
+      "longitude": 151.2642,
+      "budgetRange": "Free",
+      "openingHours": "24 hours"
+    },
+    {
+      "name": "Balmoral Beach",
+      "type": "beach",
+      "category": "outdoor",
+      "description": "Calm harbour beach perfect for a relaxed swim. Great cafe scene and picnic spots.",
+      "address": "Balmoral, Mosman",
+      "latitude": -33.8243,
+      "longitude": 151.2504,
+      "budgetRange": "Free",
+      "openingHours": "24 hours"
+    }
+  ],
+  "budget_eats": [
+    {
+      "name": "Mamak (Haymarket)",
+      "type": "restaurant",
+      "category": "indoor",
+      "description": "Famous for authentic Malaysian roti and satay. Always busy, always worth the wait. Budget-friendly!",
+      "address": "15 Goulburn St, Haymarket",
+      "latitude": -33.8791,
+      "longitude": 151.206,
+      "budgetRange": "$",
+      "openingHours": "11:30 AM - 10:00 PM"
+    },
+    {
+      "name": "Chat Thai",
+      "type": "restaurant",
+      "category": "indoor",
+      "description": "Authentic Thai street food at student-friendly prices. Try the pad thai and mango sticky rice!",
+      "address": "20 Campbell St, Haymarket",
+      "latitude": -33.8785,
+      "longitude": 151.2058,
+      "budgetRange": "$",
+      "openingHours": "10:00 AM - 2:00 AM"
+    },
+    {
+      "name": "Din Tai Fung (World Square)",
+      "type": "restaurant",
+      "category": "indoor",
+      "description": "World-famous xiao long bao (soup dumplings). Watch chefs make them through the glass!",
+      "address": "World Square, Sydney",
+      "latitude": -33.8771,
+      "longitude": 151.2068,
+      "budgetRange": "$$",
+      "openingHours": "11:00 AM - 9:30 PM"
+    },
+    {
+      "name": "El Jannah (Granville)",
+      "type": "restaurant",
+      "category": "indoor",
+      "description": "Legendary Lebanese charcoal chicken with the best garlic sauce in Sydney. Huge portions, small price.",
+      "address": "4-6 South St, Granville",
+      "latitude": -33.8335,
+      "longitude": 151.0124,
+      "budgetRange": "$",
+      "openingHours": "10:00 AM - 10:00 PM"
+    },
+    {
+      "name": "Spice Alley (Chippendale)",
+      "type": "restaurant",
+      "category": "indoor",
+      "description": "Hawker-style food court with Thai, Malaysian, Vietnamese, and Japanese stalls. Cheap and delicious!",
+      "address": "18-20 Kensington St, Chippendale",
+      "latitude": -33.8844,
+      "longitude": 151.2012,
+      "budgetRange": "$",
+      "openingHours": "11:30 AM - 9:00 PM"
+    },
+    {
+      "name": "Paddy's Markets",
+      "type": "market",
+      "category": "indoor",
+      "description": "Historic market with cheap Asian food, fresh produce, and bargain shopping. Student paradise!",
+      "address": "9-13 Hay St, Haymarket",
+      "latitude": -33.8791,
+      "longitude": 151.205,
+      "budgetRange": "$",
+      "openingHours": "Wed-Sun 10:00 AM - 6:00 PM"
+    }
+  ]
+}

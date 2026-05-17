@@ -2,23 +2,38 @@
 //  ContentView.swift
 //  sydweekender-ios
 //
-//  Created by 文宇 on 17/5/2026.
-//
 
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selectedTab = 0
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView(selection: $selectedTab) {
+            HomeView()
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
+                .tag(0)
+            
+            CheckInMapView()
+                .tabItem {
+                    Label("Footprint", systemImage: "mappin.and.ellipse")
+                }
+                .tag(1)
+            
+            HistoryView()
+                .tabItem {
+                    Label("History", systemImage: "bookmark")
+                }
+                .tag(2)
+            
+            SettingsView()
+                .tabItem {
+                    Label("Settings", systemImage: "gearshape")
+                }
+                .tag(3)
         }
-        .padding()
+        .tint(Color.Design.textMain)
     }
-}
-
-#Preview {
-    ContentView()
 }
